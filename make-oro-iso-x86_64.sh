@@ -11,7 +11,7 @@ cp \
 	oro-x86_64/boot/limine
 cp /src/oro-os/kernel/target/x86_64-unknown-oro/${1-debug}/oro-limine-x86_64 oro-x86_64/oro-limine-x86-64
 cp /src/oro-os/kernel/target/x86_64-unknown-oro/${1-debug}/oro-kernel-x86_64 oro-x86_64/oro-kernel-x86_64
-cp /src/oro-os/oro/target/x86_64-unknown-none/release/mod-boot-logger oro-x86_64/M-6TD9M6QGRUGMZEH3HCRMGW0D1
+cp /src/oro-os/oro/target/x86_64-unknown-oro-elf/release/mod-boot-logger.oro oro-x86_64/M-6TD9M6QGRUGMZEH3HCRMGW0D1
 mkdir -p oro-x86_64/EFI/BOOT
 cp BOOTX64.EFI BOOTIA32.EFI oro-x86_64/EFI/BOOT
 xorriso \
