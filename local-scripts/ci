@@ -30,6 +30,9 @@ function on {
 on X86_64  cargo oro-clippy -- -D warnings
 on X86_64  cargo oro-clippy-x86_64 -- -D warnings
 on AARCH64 cargo oro-clippy-aarch64 -- -D warnings
+on X86_64  cargo oro-clippy --profile release -- -D warnings
+on X86_64  cargo oro-clippy-x86_64 --profile release -- -D warnings
+on AARCH64 cargo oro-clippy-aarch64 --profile release -- -D warnings
 on X86_64  cargo kernel-x86_64 --profile dev
 on X86_64  cargo kernel-x86_64 --profile release
 on X86_64  cargo limine-x86_64 --profile dev
