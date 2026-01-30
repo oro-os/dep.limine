@@ -10,4 +10,4 @@ if [ ! -f "$QEMU_EFI" ]; then
 	echo "no such QEMU_EFI.fd file: ${QEMU_EFI}" >&2
 	exit 2
 fi
-exec qemu-system-aarch64 -M virt -cpu cortex-a57  -no-reboot -no-shutdown -serial stdio -cdrom ./oro-aarch64.iso -m 512 -smp cores=3 -bios "${QEMU_EFI}" "$@"
+exec /src/oro-os/oro-qemu/build/qemu-system-aarch64 -M virt -cpu cortex-a57  -no-reboot -no-shutdown -serial stdio -cdrom ./oro-aarch64.iso -m 512 -smp cores=3 -bios "${QEMU_EFI}" "$@"

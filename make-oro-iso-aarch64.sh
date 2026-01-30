@@ -7,10 +7,10 @@ cp \
 	limine-uefi-cd.bin \
 	limine-bios-cd.bin \
 	limine-bios.sys \
-	limine.cfg \
+	limine.conf \
 	oro-aarch64
-cp /src/oro-os/kernel/target/aarch64-unknown-oro/${1-debug}/oro-limine-aarch64 oro-aarch64/oro-limine
-cp /src/oro-os/kernel/target/aarch64-unknown-oro/${1-debug}/oro-kernel-aarch64 oro-aarch64/oro-kernel
+cp /src/oro-os/kernel/target/aarch64-unknown-oro/${1-debug}/oro-limine-aarch64 oro-aarch64/oro-limine-aarch64
+#cp /src/oro-os/kernel/target/aarch64-unknown-oro/${1-debug}/oro-kernel-aarch64 oro-aarch64/oro-kernel-aarch64
 cp BOOTAA64.EFI oro-aarch64/EFI/BOOT
 xorriso \
 	-as mkisofs \

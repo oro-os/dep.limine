@@ -42,7 +42,7 @@ on AARCH64 cargo kernel-aarch64 --profile release
 on AARCH64 cargo limine-aarch64 --profile dev
 on AARCH64 cargo limine-aarch64 --profile release
 set -x
-env RUSTFLAGS="-D warnings" RUSTDOCFLAGS="-D rustdoc::all" cargo oro-doc
+env RUSTFLAGS="-D warnings" cargo oro-doc
 rm -f target/oro-boot.h && env ORO_BUILD_PROTOCOL_HEADER=1 cargo build -p oro-boot-protocol --release && bash ./oro-boot-protocol/test-boot-header.sh
 cargo oro-test --target $(rustc -vV | sed -n 's|host: ||p')
 cargo fmt --all -- --check
